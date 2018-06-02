@@ -7467,8 +7467,21 @@ label.radio-warning input[type=checkbox]:focus + .check-mark {
   background-image: -o-linear-gradient(to top, #333333);
   background-image: linear-gradient(to top, #333333);
   margin-bottom: 1rem;
-  padding: 0; }
+  padding: 0;
+  /*
+  .sidebar__nav{
+    overflow-y: auto; 
+    height: calc(100% - 7rem);
+  }
+
+*/ }
   .app .app-body .app-sidebar .sidebar-header {
+    top: 0;
+    height: 3.6rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border-bottom: 1px solid #67B8DE;
+    background-color: #222222;
     padding: 0 1.25rem;
     text-align: center; }
     .app .app-body .app-sidebar .sidebar-header .user-photo {
@@ -7490,6 +7503,7 @@ label.radio-warning input[type=checkbox]:focus + .check-mark {
         filter: alpha(opacity=75);
         opacity: 0.75; }
   .app .app-body .app-sidebar .sidebar-nav {
+    height: 100%;
     overflow: hidden;
     padding: 0; }
     .app .app-body .app-sidebar .sidebar-nav ul {
@@ -7602,6 +7616,7 @@ label.radio-warning input[type=checkbox]:focus + .check-mark {
           -moz-backface-visibility: visible;
           visibility: visible; } }
   .app .app-body .app-sidebar.sidebar-slide-left {
+    overflow-y: hidden;
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
     -o-transition: width 0.3s;
