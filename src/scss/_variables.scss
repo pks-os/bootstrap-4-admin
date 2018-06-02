@@ -40,6 +40,8 @@ $teal: #20c997 !default;
 $turquoise: #1abc9c !default;
 $yellow: #f3ca0c !default;
 
+$black-b: #333333;
+
 $theme-colors: () !default;
 $theme-colors: map-merge((
   "primary": $peter-river,
@@ -93,7 +95,7 @@ $nav-tabs-link-hover-border-color:  $gray-300 $gray-300 $nav-tabs-border-color !
 
 // Sidebar
 
-$sidebar-background: $peter-river !default;
+$sidebar-background: $black-b !default;
 $sidebar-btn-close: rgba($white, .5) !default;
 $sidebar-font-size: 0.95rem !default;
 $sidebar-header-color: rgba($white, .75) !default;

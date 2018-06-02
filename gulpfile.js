@@ -33,9 +33,9 @@ gulp.task('serve', ['sass'], function() {
         server: "./"
     });
 
-    gulp.watch('scss/**/*.scss', ['sass']);
+    gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('**/*.html').on('change', browserSync.reload);
-    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
 
 });
 
@@ -53,9 +53,9 @@ gulp.task('serve:lite', function() {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('./scss/style.scss')
+    return gulp.src('./src/scss/main.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
 });
 
@@ -63,23 +63,6 @@ gulp.task('sass:watch', function () {
     gulp.watch('./scss/**/*.scss');
 });
 
-//html
-gulp.task('build-html', () => {
-    gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'])
-        .pipe(htmlextend({
-            annotations: false,
-            verbose: false,
-            root: './src/html'
-        }).on('error', (e) => console.log(e)))
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/html/'
-        }).on('error', (e) => console.log(e)))
-        .pipe(htmlmin({ collapseWhitespace: true }).on('error', (e) => console.log(e)))
-        .pipe(gulp.dest('docs/'));
-});
-
-//./html
 
 gulp.task('clean:dist', function () {
     return del(paths.dist);

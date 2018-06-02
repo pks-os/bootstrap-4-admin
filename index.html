@@ -17,23 +17,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
-  <link href="@@webRoot/../dist/admin4b.min.css" rel="stylesheet">
+  <link href="@@webRoot/../dist/css/main.css" rel="stylesheet">
 </head>
 <body>
 
 
 <div class="app">
   <div class="app-body">
-<style type="text/css">
-	.sidebar-header{
-		margin-top: -2rem;
-	}
-	.sidebar-slide-left{
-		z-index: 9999;
-	}
-</style>
-
-
 
 <!-- sidebar -->
 <div class="app-sidebar sidebar-slide-left">
@@ -47,17 +37,16 @@
     </button>
   </div>
 
-
   <div class="sidebar-header">
-    <img src="@@webRoot/assets/img/john-doe.png" class="user-photo">
     <p class="username">
-      John Doe<br>
-      <small>Administrator</small>
+      Admin
     </p>
   </div>
+
+  <nav class="sidebar__nav" style="">
   <ul id="sidebar-nav" class="sidebar-nav">
     <li class="sidebar-nav-btn">
-      <a href="@@webRoot/index.html" class="btn btn-block btn-outline-light">
+      <a href="@@webRoot/index.html" class="sidebar-nav-link">
         Get started
       </a>
     </li>
@@ -128,7 +117,21 @@
       </ul>
     </li>
   </ul>
-  <div class="sidebar-footer">
+  </nav>
+
+  <style>
+  	.sidebar-footer{
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 15rem;
+	background-color: #222222;
+	height: 3rem;
+
+  	}
+  </style>
+
+  <div class="sidebar-footer" style="margin: 1rem 0 0; padding: 1rem 0 0">
     <a href="@@webRoot/pages/content/chat.html" data-toggle="tooltip" title="Support">
       <i class="fa fa-comment"></i>
     </a>
@@ -139,49 +142,56 @@
       <i class="fa fa-power-off"></i>
     </a>
   </div>
+
+
+
 </div>
 <!-- ./sidebar -->
 
 
 
-<!-- navbar -->
-    <div class="app-content">
-      <nav class="navbar fixed-top navbar-expand navbar-light bg-white">
-  <button type="button" class="btn btn-sidebar" data-toggle="sidebar">
-    <i class="fa fa-bars"></i>
-  </button>
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="badge badge-pill badge-primary">3</span>
-        <i class="fa fa-bell-o"></i>
-      </a>
-      <div class="dropdown-menu dropdown-menu-right">
-        <a href="@@webRoot/pages/content/notification.html" class="dropdown-item">
-          <small class="dropdown-item-title">Lorem ipsum (today)</small><br>
-          <div>Lorem ipsum dolor sit amet...</div>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="@@webRoot/pages/content/notification.html" class="dropdown-item">
-          <small class="text-secondary">Lorem ipsum (yesterday)</small><br>
-          <div>Lorem ipsum dolor sit amet...</div>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="@@webRoot/pages/content/notification.html" class="dropdown-item">
-          <small class="text-secondary">Lorem ipsum (12/25/2017)</small><br>
-          <div>Lorem ipsum dolor sit amet...</div>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="@@webRoot/pages/content/notifications.html" class="dropdown-item dropdown-link">
-          See all notifications
-        </a>
-      </div>
-    </li>
-  </ul>
-</nav>
-<!-- ./navbar -->
-
 <!-- body -->
+
+
+
+
+<div class="app-content">
+  <!-- navbar  fixed-top style="left: 15rem" -->
+  <nav class="navbar  navbar-expand navbar-light bg-white" >
+    <button type="button" class="btn btn-sidebar" data-toggle="sidebar">
+      <i class="fa fa-bars"></i>
+    </button>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="badge badge-pill badge-primary">3</span>
+          <i class="fa fa-bell-o"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a href="@@webRoot/pages/content/notification.html" class="dropdown-item">
+            <small class="dropdown-item-title">Lorem ipsum (today)</small><br>
+            <div>Lorem ipsum dolor sit amet...</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="@@webRoot/pages/content/notification.html" class="dropdown-item">
+            <small class="text-secondary">Lorem ipsum (yesterday)</small><br>
+            <div>Lorem ipsum dolor sit amet...</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="@@webRoot/pages/content/notification.html" class="dropdown-item">
+            <small class="text-secondary">Lorem ipsum (12/25/2017)</small><br>
+            <div>Lorem ipsum dolor sit amet...</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="@@webRoot/pages/content/notifications.html" class="dropdown-item dropdown-link">
+            See all notifications
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- ./navbar -->
+
 
 
 <nav aria-label="breadcrumb">
