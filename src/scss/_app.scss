@@ -10,12 +10,12 @@ body
     font-size: $font-size-base;
 }
 
-.app, .app-sidebar, .app-content
+#goes, .app-sidebar, .app-content
 {
     height: 100%;
 }
 
-.app
+#goes
 {
     position: relative;
     width: 100%;
@@ -87,7 +87,7 @@ body
 
 @media print
 {
-    .app .app-body
+    #goes .app-body
     {
         position: relative;
         height: auto;
